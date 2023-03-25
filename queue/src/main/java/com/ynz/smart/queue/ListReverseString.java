@@ -2,7 +2,6 @@ package com.ynz.smart.queue;
 
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Stack;
 
 public class ListReverseString {
     private static final String str = "This is a new tool.";
@@ -11,8 +10,8 @@ public class ListReverseString {
         Deque<Character> characterStack = new LinkedList<>();
 
         char[] strCharAry = str.toCharArray();
-        for (int i = 0; i < strCharAry.length; i++) {
-            characterStack.push(strCharAry[i]);
+        for (char c : strCharAry) {
+            characterStack.push(c);
         }
         System.out.println(characterStack);
 
@@ -24,5 +23,4 @@ public class ListReverseString {
         System.out.println(str);
         System.out.println(sb);
     }
-
 }

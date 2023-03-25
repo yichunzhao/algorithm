@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * selection sorting: selecting current one as the min, and comparing with the rest, then updating min.
- * time complexity, the worst case: 0[n^2], the best case: O[n]
+ * time complexity, the worst case: O[n^2], the best case: O[n]
  */
 public class SelectionSort extends Base {
 
