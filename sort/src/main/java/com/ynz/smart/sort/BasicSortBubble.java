@@ -2,8 +2,7 @@ package com.ynz.smart.sort;
 
 import java.util.Arrays;
 
-public class BasicSortBubble {
-    private static int[] numbs = {108, 5, 36, 3, 8, 120, 1, 0, 12, 22};
+public class BasicSortBubble extends Base {
 
     private static void sort(int[] numbs) {
         int loops = 0;
