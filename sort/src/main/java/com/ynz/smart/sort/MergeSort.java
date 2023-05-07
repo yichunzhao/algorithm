@@ -3,6 +3,7 @@ package com.ynz.smart.sort;
 import java.util.Arrays;
 
 /**
+ * Divide into small problems and solve them, and then Merge back to the big problem.
  * time complexity 0(n*long(n)), rather than O(n*n)
  * space complexity is higher than others(bubble, insert, selection), they sort in place.
  */
@@ -13,10 +14,11 @@ public class MergeSort extends Base {
         //sort the array using the merge sort.
         mergeSort(numbs);
         System.out.println("sorted array:" + Arrays.toString(numbs));
-
     }
 
     public static void mergeSort(int[] inputArray) {
+        System.out.println("divide input array:" + Arrays.toString(inputArray));
+
         // recursive base case: until a single element
         int length = inputArray.length;
         if (length <= 1) {
@@ -28,6 +30,7 @@ public class MergeSort extends Base {
 
         // divide problem into two small problems
         // Split the original array into left and right arrays
+        // extra space to store divided small problems.
         int[] leftArray = Arrays.copyOfRange(inputArray, 0, middle);
         int[] rightArray = Arrays.copyOfRange(inputArray, middle, inputArray.length);
 
@@ -42,7 +45,11 @@ public class MergeSort extends Base {
     }
 
     private static void merge(int[] leftArray, int[] rightArray, int[] inputArray) {
-        System.out.println("merge inputArray size:" + inputArray.length);
+        System.out.println("merge input Array: " + Arrays.toString(inputArray));
+
+        System.out.println("merge input Left array: " + Arrays.toString(leftArray));
+        System.out.println("merge input Right array: " + Arrays.toString(rightArray));
+
         int leftArraySize = inputArray.length / 2;
         int rightArraySize = inputArray.length - leftArraySize;
 
@@ -74,5 +81,7 @@ public class MergeSort extends Base {
             i++;
             r++;
         }
+
+        System.out.println("after merge Array: " + Arrays.toString(inputArray));
     }
 }
