@@ -1,4 +1,4 @@
-package main.java.com.ynz.nonlinear.tree.present;
+package com.ynz.smart.tree;
 
 import java.util.LinkedList;
 import java.util.Queue;

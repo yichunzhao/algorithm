@@ -1,4 +1,4 @@
-package main.java.com.ynz.nonlinear.tree.present;
+package com.ynz.smart.tree;
 
 public class Node {
 
